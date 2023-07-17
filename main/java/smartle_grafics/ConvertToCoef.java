@@ -1,4 +1,4 @@
-package smartle_grafics;
+package SmarTle_Graphics.main.java.smartle_grafics;
 
 public class ConvertToCoef{
   public static double convertC(String equ, int posX){
@@ -81,6 +81,9 @@ public class ConvertToCoef{
   }
   public static double convertCAcot(String equ){
     return convertC(equ, equ.indexOf("acot"));
+  }
+  public static double convertCAsec(String equ){
+    return convertC(equ, equ.indexOf("asec"));
   }
   public static double convertCAcsc(String equ){
     return convertC(equ, equ.indexOf("acsc"));

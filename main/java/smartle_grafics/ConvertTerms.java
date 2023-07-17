@@ -1,5 +1,7 @@
-package smartle_grafics;
+package SmarTle_Graphics.main.java.smartle_grafics;
+
 import java.util.*;
+
 public class ConvertTerms {
 
   public static double convertC(String conv) {
@@ -48,7 +50,7 @@ public class ConvertTerms {
     return ConvertToCoef.convertCAsec(conv);
   }
   public static double convertAcsc(String conv){
-    return ConvertToCoef.convertAcsc(conv);
+    return ConvertToCoef.convertCAcsc(conv);
   }
   public static double sqrtEquation(String conv, double dominio){
     return ConvertToEspecialFunction.sqrtEquation(conv, dominio);

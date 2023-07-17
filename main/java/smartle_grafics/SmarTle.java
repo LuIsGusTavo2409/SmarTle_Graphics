@@ -1,5 +1,5 @@
-package smartle_grafics;
-import galapagos.*;
+package SmarTle_Graphics.main.java.smartle_grafics;
+import SmarTle_Graphics.main.java.galapagos.*;
 
 public class SmarTle {
 
