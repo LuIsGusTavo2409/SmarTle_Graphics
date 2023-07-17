@@ -25,6 +25,7 @@ public class SmarTle {
     //llamada de los terminos anidados recursivamente
     //exacto
     //no funciona ln
+    JOptionPane.showMessageDialog(null, "No esta soportado, el logaritmo natural\nLa forma para ingresar la ecuacion es:\n\tx^(2) + x + 1\nNo ingresar '*', sin embargo si esta soportado la multiplicacion implicitá\nDe la forma\n\t 3(x + 5) -> 3x + 15");
     String laEcu = JOptionPane.showInputDialog(null, "Ingrese la función");
     if(laEcu.length()== 0) return; 
     Equations conv = new Equations(laEcu, false);
