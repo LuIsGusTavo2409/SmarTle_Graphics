@@ -1,4 +1,4 @@
-package smartle_grafics;
+package SmarTle_Graphics.main.java.smartle_grafics;
 import java.util.*;
 
 public class Equations {

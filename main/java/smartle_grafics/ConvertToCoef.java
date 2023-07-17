@@ -43,6 +43,7 @@ public class ConvertToCoef{
     } 
     return ext;
   }
+  //
   public static double convertCpar(String equ){
     return convertC(equ, equ.indexOf("("));
   }

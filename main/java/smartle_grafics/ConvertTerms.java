@@ -20,6 +20,9 @@ public class ConvertTerms {
     return ConvertToCoef.convertCSen(conv);
   }
   public static double convertCCos(String conv){
+    return ConvertToCoef.convertCCos(conv);
+  }
+  public static double convertCTan(String conv){
     return ConvertToCoef.convertCTan(conv);
   }
   public static double convertCCot(String conv){
@@ -43,13 +46,13 @@ public class ConvertTerms {
   public static double convertCAtan(String conv){
     return ConvertToCoef.convertCAtan(conv);
   }
-  public static double convertAcot(String conv){
+  public static double convertCAcot(String conv){
     return ConvertToCoef.convertCAcot(conv);
   }
-  public static double convertAsec(String conv){
+  public static double convertCAsec(String conv){
     return ConvertToCoef.convertCAsec(conv);
   }
-  public static double convertAcsc(String conv){
+  public static double convertCAcsc(String conv){
     return ConvertToCoef.convertCAcsc(conv);
   }
   public static double sqrtEquation(String conv, double dominio){
@@ -58,7 +61,132 @@ public class ConvertTerms {
   public static boolean isSqrt(String equ){
     return ConvertToEspecialFunction.isSqrt(equ);
   }
-  
+  public static boolean isSen(String equ){
+    return ConvertToEspecialFunction.isSen(equ);
+  }
+  public static double senEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.senEquation(conv, dominio);
+  }
+  public static boolean isCos(String equ){
+    return ConvertToEspecialFunction.isCos(equ);
+  }
+  public static double cosEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.cosEquation(conv, dominio);
+  }
+  public static boolean isTan(String equ){
+    return ConvertToEspecialFunction.isTan(equ);
+  }
+  public static double tanEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.tanEquation(conv, dominio);
+  }
+  public static boolean isCot(String equ){
+    return ConvertToEspecialFunction.isCot(equ);
+  }
+  public static double cotEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.cotEquation(conv, dominio);
+  }
+  public static boolean isSec(String equ){
+    return ConvertToEspecialFunction.isSec(equ);
+  }
+  public static double secEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.secEquation(conv, dominio);
+  }
+  public static boolean isCsc(String equ){
+    return ConvertToEspecialFunction.isCsc(equ);
+  }
+  public static double cscEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.cscEquation(conv, dominio);
+  }
+  public static boolean isLn(String equ){
+    return ConvertToEspecialFunction.isLn(equ);
+  }
+  public static double lnEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.lnEquation(conv, dominio);
+  }
+  public static boolean isAsen(String equ){
+    return ConvertToEspecialFunction.isAsen(equ);
+  }
+  public static double asenEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.asenEquation(conv, dominio);
+  }
+  public static boolean isAcos(String equ){
+    return ConvertToEspecialFunction.isAcos(equ);
+  }
+  public static double acosEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.acosEquation(conv, dominio);
+  }
+  public static boolean isAtan(String equ){
+    return ConvertToEspecialFunction.isAtan(equ);
+  }
+  public static double atanEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.atanEquation(conv, dominio);
+  }
+  public static boolean isAcot(String equ){
+    return ConvertToEspecialFunction.isAcot(equ);
+  }
+  public static double acotEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.acotEquation(conv, dominio);
+  }
+  public static boolean isAsec(String equ){
+    return ConvertToEspecialFunction.isAsec(equ);
+  }
+  public static double asecEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.asecEquation(conv, dominio);
+  }
+  public static boolean isAcsc(String equ){
+    return ConvertToEspecialFunction.isAcsc(equ);
+  }
+  public static double acscEquation(String conv, double dominio){
+    return ConvertToEspecialFunction.acscEquation(conv, dominio);
+  }
+  public static double toEspecialFunction(String term, double dominio){
+    if(isAsen(term)){
+      double coef = convertCAsen(term);
+      return coef * asenEquation(term, dominio);
+    }else if(isAcos(term)){
+      double coef = convertCAcos(term);
+      return coef * acosEquation(term, dominio);
+    }else if(isAtan(term)){
+      double coef = convertCAtan(term);
+      return coef * atanEquation(term, dominio);
+    }else if(isAcot(term)){
+      double coef = convertCAcot(term);
+      return coef * acotEquation(term, dominio);
+    }else if(isAsec(term)){
+      double coef = convertCAsec(term);
+      return coef * asecEquation(term, dominio);
+    }else if(isAcsc(term)){
+      double coef = convertCAcsc(term);
+      return coef * acscEquation(term, dominio);
+    }else if(isSen(term)){
+      double coef = convertCSen(term);
+      return coef * senEquation(term, dominio);
+    }else if(isCos(term)){
+      double coef = convertCCos(term);
+      return coef * cosEquation(term, dominio);
+    }else if(isTan(term)){
+      double coef = convertCTan(term);
+      return coef * tanEquation(term, dominio);
+    }else if(isCot(term)){
+      double coef = convertCCot(term);
+      return coef * cotEquation(term, dominio);
+    }else if(isSec(term)){
+      double coef = convertCSec(term);
+      return coef * secEquation(term, dominio);
+    }else if(isCsc(term)){
+      double coef = convertCCsc(term);
+      return coef * cscEquation(term, dominio);
+    }else if(isLn(term)){
+      double coef = convertCLn(term);
+      return coef * lnEquation(term, dominio);
+    }else if(isSqrt(term)){ //llamado de acuerdo al tipo de funcion
+      double coef = convertCR(term);
+      return coef * sqrtEquation(term, dominio);
+    }//en caso de no ser una funcion base, añadirlo a la l
+    double result = convertOneTerm(term, dominio);
+    return result;
+  }
+
   public static boolean oneTerm(String equ){
     if(equ.indexOf("sqrt") != -1){
       return true;
@@ -115,13 +243,7 @@ public class ConvertTerms {
         Equations equ = new Equations(term, true);
         realTerms.add(imagen(convertTerms(equ.getTerms(), dominio)));
       }else{
-        if(isSqrt(term)){
-          double coef = convertCR(term);
-          realTerms.add(coef * sqrtEquation(term, dominio));
-        }else{
-          double result = convertOneTerm(term, dominio);
-          realTerms.add(result);
-        }
+        realTerms.add(toEspecialFunction(term, dominio));
       }
     }
     return realTerms;

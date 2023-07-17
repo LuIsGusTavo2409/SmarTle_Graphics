@@ -1,5 +1,5 @@
 package SmarTle_Graphics.main.java.smartle_grafics;
-import galapagos.*;
+import SmarTle_Graphics.main.java.galapagos.*;
 import java.util.*;
 
 public class DrawFunctions {

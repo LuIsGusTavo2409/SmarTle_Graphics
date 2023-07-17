@@ -30,7 +30,8 @@ public class SmarTle {
     //convertTerms aun no soporta ese cambio,n se debe mejorar, estaba pensando en hacer llama
     //llamada de los terminos anidados recursivamente
     //exacto
-    Equations conv = new Equations("-sqrt(-x)", false);
+    //no funciona ln
+    Equations conv = new Equations("x^(2) + x- 1", false);
     System.out.println(conv.getTerms());
     //System.out.println(conv.rango());
     DrawFunctions.draw(wally, conv);

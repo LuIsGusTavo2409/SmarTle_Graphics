@@ -1,4 +1,4 @@
-package smartle_grafics;
+package SmarTle_Graphics.main.java.smartle_grafics;
 import java.util.*;
 public class ConvertToEspecialFunction extends ConvertTerms{
   public static boolean isSqrt(String equ){
@@ -88,7 +88,7 @@ public class ConvertToEspecialFunction extends ConvertTerms{
     return Double.NaN;
   }
   public static boolean isLn(String equ){
-    return equ.indexOf("csc") != -1;
+    return equ.indexOf("ln") != -1;
   }
   public static double lnEquation(String equ, double dominio){
     int i = equ.indexOf("ln") + 2; 
@@ -121,7 +121,7 @@ public class ConvertToEspecialFunction extends ConvertTerms{
     return Math.acos(imagen);
   }
   public static boolean isAtan(String equ){
-    return equ.indexOf("acos") != -1;
+    return equ.indexOf("atan") != -1;
   }
   public static double atanEquation(String equ, double dominio){
     int i = equ.indexOf("atan") + 4; 

@@ -1,4 +1,4 @@
-package galapagos;
+package SmarTle_Graphics.main.java.galapagos;
 
 
 /**
