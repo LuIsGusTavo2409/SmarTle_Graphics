@@ -27,7 +27,7 @@ public class SmarTle {
     int quiereGraficar = 0;
     do{
       String laEcu = JOptionPane.showInputDialog(null, "Ingrese la función");
-      if(laEcu.length() == 0) return; 
+      if(laEcu == null || laEcu.length() == 0) return; 
       Equations conv = new Equations(laEcu, false);
       //System.out.println(conv.getTerms());
       //System.out.println(conv.rango());
@@ -50,6 +50,7 @@ public class SmarTle {
       quiereGraficar = JOptionPane.showConfirmDialog(null, "¿Quiere graficar?");
       if(quiereGraficar == 1 || quiereGraficar == 2){
         draw.setVisible(false);
+        System.exit(0);
         return;
       }
       if(quiereGraficar == 0){
