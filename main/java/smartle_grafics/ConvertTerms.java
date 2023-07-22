@@ -139,6 +139,9 @@ public class ConvertTerms {
   public static double acscEquation(String conv, double dominio){
     return ConvertToEspecialFunction.acscEquation(conv, dominio);
   }
+  public static boolean globalEspecialFunction(String conv){
+    return isSqrt(conv) || isSen(conv) || isCos(conv) || isTan(conv) || isCot(conv) || isSec(conv) || isCsc(conv) || isLn(conv) || isAsen(conv) || isAcos(conv) || isAtan(conv) || isAcot(conv) || isAsec(conv) || isAcsc(conv);
+  }
   public static double toEspecialFunction(String term, double dominio){
     if(isAsen(term)){
       double coef = convertCAsen(term);
@@ -188,7 +191,7 @@ public class ConvertTerms {
   }
 
   public static boolean oneTerm(String equ){
-    if(equ.indexOf("sqrt") != -1){
+    if(globalEspecialFunction(equ)){
       return true;
     }
     String saveEqu = equ;
@@ -255,9 +258,9 @@ public class ConvertTerms {
     }
     return imagen;
   }
-  public static List<Double> rango(List<String> terms){
+  public static List<Double> rango(List<String> terms, double init, double fin){
     List<Double> rango = new ArrayList<Double>();
-    for(Double i = -7.0; i < 8; i += 0.01){
+    for(Double i = init; i < fin; i += 0.01){
       double savei = round2decimals(i);
       //System.out.println(i);
       List<Double> realterms = convertTerms(terms, savei);

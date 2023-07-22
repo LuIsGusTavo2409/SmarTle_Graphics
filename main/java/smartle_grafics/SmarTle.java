@@ -27,7 +27,11 @@ public class SmarTle {
     int quiereGraficar = 0;
     do{
       String laEcu = JOptionPane.showInputDialog(null, "Ingrese la función");
-      if(laEcu == null || laEcu.length() == 0) return; 
+      if(laEcu == null || laEcu.length() == 0){
+        System.exit(0);
+      }
+      double init = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el valor inicial del dominio"));
+      double fin = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el valor final del dominio"));
       Equations conv = new Equations(laEcu, false);
       //System.out.println(conv.getTerms());
       //System.out.println(conv.rango());
@@ -43,7 +47,7 @@ public class SmarTle {
       draw.setUnit(0.5);
       draw.setVisible(true);
       try{
-        DrawFunctions.draw(wally, conv);
+        DrawFunctions.draw(wally, conv, init, fin);
       }catch(Exception e){
         JOptionPane.showMessageDialog(null, "Hay un error intenta con otra funcion :(");
       }
@@ -55,6 +59,8 @@ public class SmarTle {
       }
       if(quiereGraficar == 0){
         draw.setVisible(false);
+        draw = null;
+        System.gc();
       }
     }while(quiereGraficar == 0);
     return;

@@ -22,7 +22,7 @@ public class Equations {
   public List<String> getTerms(){
     return SeparateTerms.getTerms(this.equ);
   }
-  public List<Double> rango(){
-    return ConvertTerms.rango(getTerms());
+  public List<Double> rango(double init, double fin){
+    return ConvertTerms.rango(getTerms(), init, fin);
   }
 }
